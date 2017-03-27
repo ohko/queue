@@ -72,3 +72,8 @@ func (o *Queue) Put(data interface{}) bool {
 		runtime.Gosched()
 	}
 }
+
+// GetCount 获取缓冲数据量
+func (o *Queue) GetCount() int {
+	return len(o.queue)
+}

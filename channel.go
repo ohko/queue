@@ -42,3 +42,8 @@ func (o *QueueChannel) Put(data interface{}) bool {
 		return false
 	}
 }
+
+// GetCount 获取缓冲数据量
+func (o *QueueChannel) GetCount() int {
+	return len(o.queue)
+}

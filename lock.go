@@ -57,3 +57,8 @@ func (o *QueueLock) Put(data interface{}) bool {
 	}
 	return false
 }
+
+// GetCount 获取缓冲数据量
+func (o *QueueLock) GetCount() int {
+	return len(o.queue)
+}
